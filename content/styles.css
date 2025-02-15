@@ -1,0 +1,110 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #00796b; /* Light background */
+    color: #333; /* Dark text */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    min-width: 300px;
+    max-width: fit-content;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    color: #00796b; /* Teal color */
+    text-align: center;
+}
+
+h3 {
+    color: #00796b; /* Teal color */
+    margin-top: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00796b; /* Teal color */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="phone"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00796b; /* Teal border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    input[type="phone"]:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #004d40; /* Darker teal on focus */
+        outline: none;
+    }
+
+/* Button Styles */
+.btn {
+    background-color: #00796b; /* Teal background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+    .btn:hover {
+        background-color: #004d40; /* Darker teal on hover */
+    }
+
+/* Table Styles */
+.table-container {
+    margin-top: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table th,
+    .table td {
+        border: 1px solid #00796b; /* Teal border */
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: #00796b; /* Teal header */
+        color: white; /* White text */
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #e0f2f1; /* Light teal for even rows */
+    }
+
+    .table tr:hover {
+        background-color: #b2dfdb; /* Lighter teal on hover */
+    }
