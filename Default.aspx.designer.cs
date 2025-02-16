@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Final
+namespace Aviral_ASP
 {
 
 
@@ -33,6 +33,15 @@ namespace Final
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
 
         /// <summary>
+        /// txtMiddleName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMiddleName;
+
+        /// <summary>
         /// txtLastName control.
         /// </summary>
         /// <remarks>
@@ -42,15 +51,6 @@ namespace Final
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
 
         /// <summary>
-        /// rblGender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblGender;
-
-        /// <summary>
         /// txtAddress control.
         /// </summary>
         /// <remarks>
@@ -58,6 +58,15 @@ namespace Final
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
+
+        /// <summary>
+        /// txtAddress1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAddress1;
 
         /// <summary>
         /// txtPhoneNumber control.
@@ -105,12 +114,12 @@ namespace Final
         protected global::System.Web.UI.WebControls.Button btnSubmit;
 
         /// <summary>
-        /// GridView1 control.
+        /// viewData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button viewData;
     }
 }

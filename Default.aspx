@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Final.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Aviral_ASP.Default" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +11,10 @@
 <body>
     <div class="container">
         <h2>User Registration Form</h2>
+        
 
         <form id="form1" runat="server">
-    <div class="container">
+        <div class="container">
         
 
     
@@ -21,24 +22,25 @@
             <label>First Name</label>
             <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" required></asp:TextBox>
         </div>
+        <div class="form-group">
+            <label>Middle Name</label>
+            <asp:TextBox ID="txtMiddleName" runat="server" CssClass="form-control" ></asp:TextBox>
+        </div>
 
         <div class="form-group">
             <label>Last Name</label>
             <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" required></asp:TextBox>
         </div>
 
-        <div class="form-group">
-            <label>Gender</label>
-            <asp:RadioButtonList ID="rblGender" runat="server" RepeatDirection="Horizontal">
-                <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
-                <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
-                <asp:ListItem Text="Other" Value="Other"></asp:ListItem>
-            </asp:RadioButtonList>
-        </div>
+        
 
         <div class="form-group">
-            <label>Address</label>
+            <label>Permanent Address</label>
             <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label>Current Address</label>
+            <asp:TextBox ID="txtAddress1" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3"></asp:TextBox>
         </div>
 
         <div class="form-group">
@@ -59,21 +61,26 @@
         <div class="form-group">
             <label>Status</label>
             <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-control">
-                <asp:ListItem Text="Active" Value="Active"></asp:ListItem>
-                <asp:ListItem Text="Inactive" Value="Inactive"></asp:ListItem>
+                <asp:ListItem Text="Act" Value="Act"></asp:ListItem>
+                <asp:ListItem Text="Inac" Value="Inac"></asp:ListItem>
             </asp:DropDownList>
         </div>
 
         <div class="form-group">
             <asp:Button ID="btnSubmit" runat="server" CssClass="btn" Text="Submit" OnClick="btnSubmit_Click" />
         </div>
-
-        <h3>User Details</h3>
-        <div class="table-container">
-            <asp:GridView ID="GridView1" runat="server" CssClass="table" AutoGenerateColumns="True"></asp:GridView>
-        </div>
+        
+    <div>
+        <asp:Button ID="viewData" runat="server" CssClass="btn" Text="View Data" OnClick="viewData_Click" />
     </div>
+        
+    </div>
+       
 </form>
+        
+            
+        
+
     </div>
 </body>
 </html>
