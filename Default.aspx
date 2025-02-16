@@ -68,7 +68,6 @@
             <asp:Button ID="btnSubmit" runat="server" CssClass="btn" Text="Submit" OnClick="btnSubmit_Click" />
         </div>
 
-        <!-- GridView (Must be inside the form) -->
         <h3>User Details</h3>
         <div class="table-container">
             <asp:GridView ID="GridView1" runat="server" CssClass="table" AutoGenerateColumns="True"></asp:GridView>

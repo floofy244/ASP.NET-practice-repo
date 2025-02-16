@@ -15,7 +15,7 @@ namespace Final
         {
             if (!IsPostBack)
             {
-                LoadData(); // Load data into GridView on page load
+                LoadData(); 
             }
         }
 
@@ -42,7 +42,7 @@ namespace Final
                 }
             }
 
-            LoadData(); // Refresh GridView after inserting data
+            LoadData(); 
         }
 
         private void LoadData()

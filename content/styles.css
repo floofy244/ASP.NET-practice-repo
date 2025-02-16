@@ -1,7 +1,7 @@
 ﻿body {
     font-family: Arial, sans-serif;
-    background-color: #00796b; /* Light background */
-    color: #333; /* Dark text */
+    background-color: #00796b; 
+    color: #333; 
     margin: 0;
     padding: 20px;
 }
@@ -11,23 +11,22 @@
     max-width: fit-content;
     margin: auto;
     padding: 20px;
-    background-color: #ffffff; /* White background for the form */
+    background-color: #ffffff; 
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
 h2 {
-    color: #00796b; /* Teal color */
+    color: #00796b;
     text-align: center;
 }
 
 h3 {
-    color: #00796b; /* Teal color */
+    color: #00796b; 
     margin-top: 20px;
 }
 
-/* Form Styles */
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -36,7 +35,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #00796b; /* Teal color */
+    color: #00796b; 
 }
 
 input[type="text"],
@@ -47,7 +46,7 @@ select,
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #00796b; /* Teal border */
+    border: 1px solid #00796b; 
     border-radius: 4px;
     box-sizing: border-box;
     transition: border-color 0.3s;
@@ -59,14 +58,14 @@ textarea {
     input[type="phone"]:focus,
     select:focus,
     textarea:focus {
-        border-color: #004d40; /* Darker teal on focus */
+        border-color: #004d40; 
         outline: none;
     }
 
-/* Button Styles */
+
 .btn {
-    background-color: #00796b; /* Teal background */
-    color: white; /* White text */
+    background-color: #00796b;
+    color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 4px;
@@ -76,10 +75,10 @@ textarea {
 }
 
     .btn:hover {
-        background-color: #004d40; /* Darker teal on hover */
+        background-color: #004d40; 
     }
 
-/* Table Styles */
+
 .table-container {
     margin-top: 20px;
 }
@@ -91,20 +90,20 @@ textarea {
 
     .table th,
     .table td {
-        border: 1px solid #00796b; /* Teal border */
+        border: 1px solid #00796b; 
         padding: 10px;
         text-align: left;
     }
 
     .table th {
-        background-color: #00796b; /* Teal header */
-        color: white; /* White text */
+        background-color: #00796b; 
+        color: white; 
     }
 
     .table tr:nth-child(even) {
-        background-color: #e0f2f1; /* Light teal for even rows */
+        background-color: #e0f2f1; 
     }
 
     .table tr:hover {
-        background-color: #b2dfdb; /* Lighter teal on hover */
+        background-color: #b2dfdb; 
     }
