@@ -71,7 +71,7 @@
         </div>
         
     <div>
-        <asp:Button ID="viewData" runat="server" CssClass="btn" Text="View Data" OnClick="viewData_Click" />
+        <button type="button" class="btn" onclick="window.location.href='userData.aspx';">View Data</button>
     </div>
         
     </div>

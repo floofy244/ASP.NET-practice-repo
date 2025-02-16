@@ -39,6 +39,8 @@ namespace Aviral_ASP
                     cmd.Parameters.AddWithValue("@Status", ddlStatus.Text);
 
                     cmd.ExecuteNonQuery();
+                    conn.Close();
+                    Response.Redirect("Default.aspx");
                 }
             }
 

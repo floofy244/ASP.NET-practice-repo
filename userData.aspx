@@ -15,7 +15,7 @@
         <div class="table-container">
             <asp:GridView ID="GridView1" runat="server" CssClass="table" AutoGenerateColumns="True"></asp:GridView>
         </div>
-
+        <br />
         <div class="form-group">
             <asp:Button ID="addData" runat="server" CssClass="btn" Text="Add Data" OnClick="addData_Click" />
         </div>
