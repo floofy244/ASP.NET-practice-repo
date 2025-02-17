@@ -11,7 +11,7 @@ namespace Aviral_ASP
 {
 
 
-    public partial class userData
+    public partial class masterSheet
     {
 
         /// <summary>
@@ -42,12 +42,12 @@ namespace Aviral_ASP
         protected global::System.Web.UI.WebControls.Button addData;
 
         /// <summary>
-        /// masterButton control.
+        /// viewData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button masterButton;
+        protected global::System.Web.UI.WebControls.Button viewData;
     }
 }

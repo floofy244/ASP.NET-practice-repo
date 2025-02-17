@@ -5,12 +5,6 @@
 <head runat="server">
     <title>APP | User Data</title>
     <link rel="stylesheet" type="text/css" href="content/styles.css" />
-    
-    <script type="text/javascript">
-        function confirmDelete() {
-            return confirm("Are you sure you want to delete this entry?");
-        }
-    </script>
 </head>
 <body>
 
@@ -28,8 +22,12 @@
             <br />
 
             <div class="form-group">
-                <asp:Button ID="addData" runat="server" CssClass="btn" Text="Add Data" OnClick="addData_Click" />
+                <div class="btnContainer">
+                    <asp:Button ID="addData" runat="server" CssClass="btn" Text="Add Data" OnClick="addData_Click" />
+                    <asp:Button ID="masterButton" runat="server" CssClass="btn" Text="Master Sheet" OnClick="masterData_Click" />
+                </div>
             </div>
+           
 
         </form>
     </div>

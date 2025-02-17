@@ -24,7 +24,7 @@ namespace Aviral_ASP
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM Tbl_Aman_Test ORDER BY ID ASC";
+                string query = "SELECT * FROM Tbl_Aman_Test where Status = 'ACT' ORDER BY ID ASC";
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
                 {
@@ -40,8 +40,12 @@ namespace Aviral_ASP
         {
             Response.Redirect("Default.aspx");
         }
+        protected void masterData_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("masterSheet.aspx");
+        }
 
-       
+
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView1.EditIndex = e.NewEditIndex;
@@ -70,16 +74,18 @@ namespace Aviral_ASP
             DateTime dob = DateTime.Parse(((TextBox)row.Cells[8].Controls[0]).Text);
             string age = ((TextBox)row.Cells[9].Controls[0]).Text;
             string status = ((TextBox)row.Cells[10].Controls[0]).Text;
+            string emailId = ((TextBox)row.Cells[15].Controls[0]).Text;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Tbl_Aman_Test SET F_Name=@FirstName,M_Name=@middleName, L_Name=@LastName, P_Address=@PAddress, C_Address=@CAddress, Mobile=@PhoneNumber, DOB=@DOB, Age=@Age, Status=@StatusFlag WHERE ID=@ID";
+                string query = "UPDATE Tbl_Aman_Test SET F_Name=@FirstName,M_Name=@middleName, L_Name=@LastName, P_Address=@PAddress, C_Address=@CAddress, Mobile=@PhoneNumber, DOB=@DOB, Age=@Age, Status=@StatusFlag, Email_ID=@EmailID WHERE ID=@ID";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@ID", id);
                     cmd.Parameters.AddWithValue("@FirstName", firstName);
                     cmd.Parameters.AddWithValue("@middleName", middleName);
+                    cmd.Parameters.AddWithValue("@EmailID", emailId);
                     cmd.Parameters.AddWithValue("@LastName", lastName);
                     cmd.Parameters.AddWithValue("@PAddress", PAddress);
                     cmd.Parameters.AddWithValue("@CAddress", CAddress);
@@ -100,20 +106,20 @@ namespace Aviral_ASP
       
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            //int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
 
 
-            //using (SqlConnection conn = new SqlConnection(connectionString))
-            //{
-                //string query = "DELETE FROM Tbl_Aman_Test WHERE ID=@ID";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE Tbl_Aman_Test SET Status = 'INACT' WHERE ID=@ID";
 
-                //using (SqlCommand cmd = new SqlCommand(query, conn))
-                //{
-                    //cmd.Parameters.AddWithValue("@ID", id);
-                   // conn.Open();
-                    //cmd.ExecuteNonQuery();
-                //}
-            //}
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
 
             LoadData();
         }

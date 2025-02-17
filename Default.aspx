@@ -9,15 +9,15 @@
     <link rel="stylesheet" type="text/css" href="content/styles.css">
 </head>
 <body>
-    <div class="container">
+    
         <h2>User Registration Form</h2>
         
 
         <form id="form1" runat="server">
-        <div class="container">
+        <div class="form-container">
         
 
-    
+        <h2>User Registration Form</h2>
         <div class="form-group">
             <label>First Name</label>
             <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" required></asp:TextBox>
@@ -30,6 +30,11 @@
         <div class="form-group">
             <label>Last Name</label>
             <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" required></asp:TextBox>
+        </div>
+        <div class="form-group">
+             <label>Email ID</label>
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
+             <asp:TextBox ID="txtEmailId" runat="server" CssClass="form-control" TextMode="Email" required></asp:TextBox>
         </div>
 
         
@@ -61,26 +66,23 @@
         <div class="form-group">
             <label>Status</label>
             <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-control">
-                <asp:ListItem Text="Act" Value="Act"></asp:ListItem>
-                <asp:ListItem Text="Inac" Value="Inac"></asp:ListItem>
+                <asp:ListItem Text="ACT" Value="ACT"></asp:ListItem>
+                <asp:ListItem Text="INACT" Value="INACT"></asp:ListItem>
             </asp:DropDownList>
         </div>
 
         <div class="form-group">
-            <asp:Button ID="btnSubmit" runat="server" CssClass="btn" Text="Submit" OnClick="btnSubmit_Click" />
+            <div class="btnContainer">
+                <asp:Button ID="btnSubmit" runat="server" CssClass="btn" Text="Submit" OnClick="btnSubmit_Click" />
+                <button type="button" class="btn" onclick="window.location.href='userData.aspx';">View Data</button>
+            </div>
         </div>
         
-    <div>
-        <button type="button" class="btn" onclick="window.location.href='userData.aspx';">View Data</button>
-    </div>
+   
         
     </div>
        
 </form>
-        
-            
-        
-
-    </div>
+    
 </body>
 </html>
