@@ -11,6 +11,12 @@
     <div class="container">
         <form id="form1" runat="server">
             <h2>Master Sheet</h2>
+            <div class="form-group">
+                <div class="btnContainer">
+                    <asp:Button ID="addData" runat="server" CssClass="btn" Text="Add Data" OnClick="addData_Click" />
+                    <asp:Button ID="viewData" runat="server" CssClass="btn" Text="View Data" OnClick="viewData_Click" />
+                </div>
+            </div>
             <div class="table-container">
                 <asp:GridView ID="GridView1" runat="server" CssClass="table" AutoGenerateColumns="True"
                     DataKeyNames="ID" >
@@ -31,12 +37,7 @@
 
             <br />
 
-            <div class="form-group">
-                <div class="btnContainer">
-                    <asp:Button ID="addData" runat="server" CssClass="btn" Text="Add Data" OnClick="addData_Click" />
-                    <asp:Button ID="viewData" runat="server" CssClass="btn" Text="View Data" OnClick="viewData_Click" />
-                </div>
-            </div>
+            
              
 
         </form>

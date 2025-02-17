@@ -21,17 +21,54 @@ namespace Aviral_ASP
 
         private void LoadData()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            if (ddlStatus.Text == "ACTIVE")
             {
-                conn.Open();
-                string query = "SELECT * FROM Tbl_Aman_Test where Status = 'ACT' ORDER BY ID ASC";
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
+                    conn.Open();
+                    string query = "SELECT * FROM Tbl_Aman_Test where Status = 'ACT' ORDER BY ID ASC";
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        GridView1.DataSource = dt;
+                        GridView1.DataBind();
+                    }
+                }
+            }
+            else if (ddlStatus.Text == "INACTIVE")
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM Tbl_Aman_Test where Status = 'INACT' ORDER BY ID ASC";
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        GridView1.DataSource = dt;
+                        GridView1.DataBind();
+                    }
+
+                }
+            }
+            else if (ddlStatus.Text == "ALL")
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM Tbl_Aman_Test ORDER BY ID ASC";
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        GridView1.DataSource = dt;
+                        GridView1.DataBind();
+                    }
+
                 }
             }
         }
@@ -52,14 +89,14 @@ namespace Aviral_ASP
             LoadData();
         }
 
-        
+
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridView1.EditIndex = -1;
             LoadData();
         }
 
-        
+
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
@@ -103,7 +140,7 @@ namespace Aviral_ASP
             LoadData();
         }
 
-      
+
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
@@ -122,6 +159,12 @@ namespace Aviral_ASP
             }
 
             LoadData();
+        }
+
+        protected void filterData_Click(object sender, EventArgs e)
+        {
+            LoadData();
+
         }
     }
 }
